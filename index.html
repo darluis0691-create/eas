@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =========================================================
+         CONFIGURACIÓN GENERAL
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Enfermeros Aliados en Salud | EAS</title>
+
+    <meta name="description"
+          content="Enfermeros Aliados en Salud - Cursos, jornadas y actualización profesional para estudiantes, técnicos y licenciados en enfermería.">
+
+
+    <style>
+
+        /* =========================================================
+           COLORES PRINCIPALES
+
+           PUEDES CAMBIAR LOS COLORES DE TODA LA WEB AQUÍ
+        ========================================================== */
+
+        :root {
+
+            --azul-oscuro: #073b5c;
+            --azul: #087ca7;
+            --celeste: #18b6c9;
+            --turquesa: #19c3b1;
+            --blanco: #ffffff;
+            --gris-claro: #f4f8fa;
+            --gris: #6c757d;
+            --texto: #24343d;
+            --verde-whatsapp: #25D366;
+        }
+
+
+        /* =========================================================
+           CONFIGURACIÓN GENERAL
+        ========================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: var(--blanco);
+
+            color: var(--texto);
+
+            line-height: 1.6;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+        }
+
+
+        /* =========================================================
+           MENÚ SUPERIOR
+        ========================================================== */
+
+        header {
+
+            background: rgba(255,255,255,0.97);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+
+        nav {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 14px 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .logo img {
+
+            width: 70px;
+
+            height: auto;
+        }
+
+
+        .logo-texto strong {
+
+            display: block;
+
+            font-size: 20px;
+
+            color: var(--azul-oscuro);
+        }
+
+
+        .logo-texto span {
+
+            font-size: 12px;
+
+            color: var(--gris);
+        }
+
+
+        .menu {
+
+            display: flex;
+
+            gap: 21px;
+        }
+
+
+        .menu a {
+
+            color: var(--texto);
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+
+        .menu a:hover {
+
+            color: var(--celeste);
+        }
+
+
+        /* =========================================================
+           PORTADA PRINCIPAL
+        ========================================================== */
+
+        .hero {
+
+            min-height: 85vh;
+
+            /* =====================================================
+               FOTO DE PORTADA
+
+               ESTA FOTO VIENE DE INTERNET.
+
+               Para cambiarla solo reemplaza la URL.
+            ====================================================== */
+
+            background:
+
+                linear-gradient(
+                    rgba(4,50,78,0.88),
+                    rgba(5,116,145,0.80)
+                ),
+
+                url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=85");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            color: white;
+        }
+
+
+        .hero-contenido {
+
+            max-width: 1200px;
+
+            width: 100%;
+
+            margin: auto;
+
+            padding: 80px 20px;
+        }
+
+
+        .etiqueta {
+
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            background: rgba(255,255,255,0.15);
+
+            border: 1px solid rgba(255,255,255,0.4);
+
+            border-radius: 30px;
+
+            margin-bottom: 25px;
+
+            font-size: 14px;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(40px, 7vw, 75px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+
+            max-width: 850px;
+        }
+
+
+        .hero h1 span {
+
+            color: #60f0e1;
+        }
+
+
+        .hero p {
+
+            max-width: 700px;
+
+            font-size: 19px;
+
+            margin-bottom: 35px;
+
+            color: #edfaff;
+        }
+
+
+        /* =========================================================
+           BOTONES
+        ========================================================== */
+
+        .botones {
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .boton {
+
+            display: inline-block;
+
+            padding: 14px 27px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .boton-principal {
+
+            background: var(--turquesa);
+
+            color: #053944;
+        }
+
+
+        .boton-principal:hover {
+
+            transform: translateY(-3px);
+        }
+
+
+        .boton-secundario {
+
+            color: white;
+
+            border: 2px solid white;
+        }
+
+
+        .boton-secundario:hover {
+
+            background: white;
+
+            color: var(--azul-oscuro);
+        }
+
+
+        /* =========================================================
+           SECCIONES GENERALES
+        ========================================================== */
+
+        section {
+
+            padding: 85px 20px;
+        }
+
+
+        .contenedor {
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        .titulo-seccion {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .titulo-seccion span {
+
+            color: var(--celeste);
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+        }
+
+
+        .titulo-seccion h2 {
+
+            color: var(--azul-oscuro);
+
+            font-size: 36px;
+
+            margin-top: 8px;
+        }
+
+
+        .titulo-seccion p {
+
+            max-width: 700px;
+
+            margin: 10px auto;
+
+            color: var(--gris);
+        }
+
+
+        /* =========================================================
+           NOSOTROS
+        ========================================================== */
+
+        .nosotros {
+
+            background: var(--gris-claro);
+        }
+
+
+        .nosotros-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .nosotros-imagen img {
+
+            width: 100%;
+
+            border-radius: 20px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+
+        .nosotros-texto h2 {
+
+            color: var(--azul-oscuro);
+
+            font-size: 38px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .nosotros-texto p {
+
+            margin-bottom: 18px;
+        }
+
+
+        .check {
+
+            margin-top: 20px;
+        }
+
+
+        .check div {
+
+            margin-bottom: 12px;
+
+            font-weight: 600;
+        }
+
+
+        .check span {
+
+            color: var(--turquesa);
+
+            margin-right: 10px;
+        }
+
+
+        /* =========================================================
+           PRÓXIMOS CURSOS
+        ========================================================== */
+
+        .proximos-cursos {
+
+            background: white;
+        }
+
+
+        .proximos-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(310px, 1fr));
+
+            gap: 30px;
+        }
+
+
+        .proximo-curso {
+
+            max-width: 760px;
+
+            margin: auto;
+
+            width: 100%;
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border: 1px solid #e6eff3;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.10);
+
+            transition: 0.3s;
+        }
+
+
+        .proximo-curso:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 17px 40px rgba(0,0,0,0.15);
+        }
+
+
+        .imagen-proximo {
+
+            position: relative;
+        }
+
+
+        .imagen-proximo img {
+
+            width: 100%;
+
+            height: 340px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .etiqueta-imagen {
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 20px;
+
+            background: var(--turquesa);
+
+            color: #043f46;
+
+            padding: 7px 15px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        .proximo-contenido {
+
+            padding: 28px;
+        }
+
+
+        .proximo-curso h3 {
+
+            color: var(--azul-oscuro);
+
+            font-size: 25px;
+
+            margin-bottom: 12px;
+
+            line-height: 1.3;
+        }
+
+
+        .proximo-descripcion {
+
+            color: var(--gris);
+
+            font-size: 15px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .datos-proximo {
+
+            background: #f5fafc;
+
+            border-radius: 12px;
+
+            padding: 18px;
+
+            margin-bottom: 22px;
+
+            line-height: 2;
+        }
+
+
+        .botones-curso {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .boton-curso {
+
+            display: inline-block;
+
+            padding: 13px 21px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .boton-informacion {
+
+            background: var(--azul);
+
+            color: white;
+        }
+
+
+        .boton-informacion:hover {
+
+            background: var(--azul-oscuro);
+        }
+
+
+        .boton-inscripcion {
+
+            background: var(--turquesa);
+
+            color: #053944;
+        }
+
+
+        .boton-inscripcion:hover {
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           CURSOS ANTERIORES - SLIDER
+        ========================================================== */
+
+        .cursos-anteriores {
+
+            background: var(--gris-claro);
+        }
+
+
+        .slider-contenedor {
+
+            position: relative;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        .slider-cursos {
+
+            display: flex;
+
+            gap: 25px;
+
+            overflow-x: auto;
+
+            scroll-behavior: smooth;
+
+            scrollbar-width: none;
+
+            padding: 10px 6px 25px;
+        }
+
+
+        .slider-cursos::-webkit-scrollbar {
+
+            display: none;
+        }
+
+
+        .curso-anterior {
+
+            flex: 0 0 345px;
+
+            background: white;
+
+            border-radius: 17px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 6px 24px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .curso-anterior:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.13);
+        }
+
+
+        .curso-anterior img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .curso-anterior-info {
+
+            padding: 21px;
+        }
+
+
+        .curso-anterior-info span {
+
+            display: inline-block;
+
+            background: #edf8fb;
+
+            color: var(--azul);
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            margin-bottom: 11px;
+        }
+
+
+        .curso-anterior-info h3 {
+
+            color: var(--azul-oscuro);
+
+            margin-bottom: 10px;
+
+            line-height: 1.35;
+        }
+
+
+        .curso-anterior-info p {
+
+            color: var(--gris);
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .fecha-anterior {
+
+            font-weight: bold;
+
+            color: var(--azul) !important;
+        }
+
+
+        .slider-botones {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 18px;
+        }
+
+
+        .slider-boton {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: var(--azul);
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+
+        .slider-boton:hover {
+
+            background: var(--turquesa);
+
+            transform: scale(1.08);
+        }
+
+
+        /* =========================================================
+           BENEFICIOS
+        ========================================================== */
+
+        .beneficios {
+
+            background: var(--azul-oscuro);
+
+            color: white;
+        }
+
+
+        .beneficios .titulo-seccion h2 {
+
+            color: white;
+        }
+
+
+        .beneficios .titulo-seccion p {
+
+            color: #cce6f2;
+        }
+
+
+        .beneficios-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+
+        .beneficio {
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border:
+                1px solid rgba(255,255,255,0.13);
+
+            text-align: center;
+        }
+
+
+        .beneficio-icono {
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================================
+           EQUIPO
+        ========================================================== */
+
+        .equipo {
+
+            background: var(--gris-claro);
+        }
+
+
+        .equipo-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+        }
+
+
+        .ponente {
+
+            background: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.07);
+        }
+
+
+        .ponente img {
+
+            width: 150px;
+
+            height: 150px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            margin-bottom: 20px;
+
+            border: 5px solid #e5f9f7;
+        }
+
+
+        .ponente h3 {
+
+            color: var(--azul-oscuro);
+        }
+
+
+        .ponente-cargo {
+
+            color: var(--celeste);
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================================================
+           CERTIFICADOS
+        ========================================================== */
+
+        .certificado-contenido {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .certificado-texto h2 {
+
+            color: var(--azul-oscuro);
+
+            font-size: 38px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .certificado-caja {
+
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eafafa,
+                    #ecf4ff
+                );
+
+            border-radius: 20px;
+
+            text-align: center;
+        }
+
+
+        .certificado-caja .icono {
+
+            font-size: 70px;
+        }
+
+
+        /* =========================================================
+           CONTACTO
+        ========================================================== */
+
+        .contacto {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    var(--azul),
+                    var(--turquesa)
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .contacto h2 {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .contacto p {
+
+            max-width: 650px;
+
+            margin: auto auto 30px;
+        }
+
+
+        .whatsapp {
+
+            background: var(--verde-whatsapp);
+
+            color: white;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================== */
+
+        footer {
+
+            background: #03283c;
+
+            color: #c8d9e1;
+
+            padding: 45px 20px 20px;
+        }
+
+
+        .footer-grid {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 35px;
+        }
+
+
+        footer h3 {
+
+            color: white;
+
+            margin-bottom: 15px;
+        }
+
+
+        footer a {
+
+            color: #c8d9e1;
+
+            display: block;
+
+            margin-bottom: 8px;
+        }
+
+
+        footer a:hover {
+
+            color: var(--turquesa);
+        }
+
+
+        .copyright {
+
+            max-width: 1200px;
+
+            margin: 35px auto 0;
+
+            border-top:
+                1px solid rgba(255,255,255,0.15);
+
+            padding-top: 20px;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           BOTÓN FLOTANTE WHATSAPP
+        ========================================================== */
+
+        .whatsapp-flotante {
+
+            position: fixed;
+
+            right: 22px;
+
+            bottom: 22px;
+
+            width: 60px;
+
+            height: 60px;
+
+            background: var(--verde-whatsapp);
+
+            border-radius: 50%;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+            z-index: 999;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .whatsapp-flotante:hover {
+
+            transform: scale(1.1);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - CELULAR
+        ========================================================== */
+
+        @media(max-width: 900px) {
+
+            .menu {
+
+                display: none;
+            }
+
+
+            .hero {
+
+                min-height: 75vh;
+            }
+
+
+            .nosotros-grid,
+            .certificado-contenido {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+
+            .titulo-seccion h2,
+            .nosotros-texto h2,
+            .certificado-texto h2 {
+
+                font-size: 30px;
+            }
+
+
+            .curso-anterior {
+
+                flex: 0 0 85%;
+            }
+
+
+            .botones-curso {
+
+                flex-direction: column;
+            }
+
+
+            .botones-curso a {
+
+                text-align: center;
+            }
+
+
+            .imagen-proximo img {
+
+                height: 240px;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================================================
+     MENÚ
+========================================================= -->
+
+<header>
+
+    <nav>
+
+
+        <div class="logo">
+
+
+            <!-- =================================================
+                 LOGO EAS
+
+                 Este sí está en tu carpeta:
+
+                 imagenes/logo-eas.png
+            ================================================== -->
+
+            <img
+                src="imagenes/logo-eas.png"
+                alt="Logo EAS">
+
+
+            <div class="logo-texto">
+
+
+                <strong>
+                    Enfermeros Aliados en Salud
+                </strong>
+
+
+                <span>
+                    Capacitación · Actualización · Enfermería
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="menu">
+
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+
+            <a href="#cursos">
+                Próximos cursos
+            </a>
+
+
+            <a href="#anteriores">
+                Cursos anteriores
+            </a>
+
+
+            <a href="#equipo">
+                Equipo
+            </a>
+
+
+            <a href="#certificados">
+                Certificados
+            </a>
+
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+
+        </div>
+
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     PORTADA
+========================================================= -->
+
+<section
+    class="hero"
+    id="inicio">
+
+
+    <div class="hero-contenido">
+
+
+        <div class="etiqueta">
+
+            🩺 Familia Enfermeros Aliados en Salud
+
+        </div>
+
+
+
+        <h1>
+
+            Aprender para
+
+            <span>
+                cuidar mejor.
+            </span>
+
+        </h1>
+
+
+
+        <p>
+
+            Cursos, jornadas académicas y programas de actualización
+            dirigidos a estudiantes, técnicos, licenciados en enfermería
+            y profesionales de la salud.
+
+        </p>
+
+
+
+        <div class="botones">
+
+
+            <a
+                href="#cursos"
+                class="boton boton-principal">
+
+                Ver próximos cursos
+
+            </a>
+
+
+
+            <a
+                href="https://wa.me/51959559628"
+                target="_blank"
+                class="boton boton-secundario">
+
+                Contactarnos
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     NOSOTROS
+========================================================= -->
+
+<section
+    class="nosotros"
+    id="nosotros">
+
+
+    <div class="contenedor">
+
+
+        <div class="nosotros-grid">
+
+
+
+            <div class="nosotros-imagen">
+
+
+                <!-- =================================================
+                     FOTO DE NOSOTROS
+
+                     TEMPORALMENTE VIENE DE INTERNET.
+                ================================================== -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=85"
+                    alt="Profesionales de enfermería">
+
+
+            </div>
+
+
+
+            <div class="nosotros-texto">
+
+
+                <span
+                    style="color:#18b6c9;font-weight:bold;">
+
+                    ¿QUIÉNES SOMOS?
+
+                </span>
+
+
+
+                <h2>
+
+                    Enfermeros Aliados en Salud
+
+                </h2>
+
+
+
+                <p>
+
+                    Somos una comunidad comprometida con la
+                    capacitación y actualización continua del
+                    personal de enfermería.
+
+                </p>
+
+
+
+                <p>
+
+                    Buscamos fortalecer conocimientos,
+                    competencias clínicas y habilidades
+                    profesionales mediante actividades
+                    académicas accesibles y enfocadas en
+                    situaciones reales del cuidado de salud.
+
+                </p>
+
+
+
+                <div class="check">
+
+
+                    <div>
+                        <span>✓</span>
+                        Capacitación accesible
+                    </div>
+
+
+                    <div>
+                        <span>✓</span>
+                        Ponentes profesionales
+                    </div>
+
+
+                    <div>
+                        <span>✓</span>
+                        Contenido actualizado
+                    </div>
+
+
+                    <div>
+                        <span>✓</span>
+                        Formación orientada a la práctica clínica
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     PRÓXIMOS CURSOS
+========================================================= -->
+
+<section
+    class="proximos-cursos"
+    id="cursos">
+
+
+    <div class="contenedor">
+
+
+        <div class="titulo-seccion">
+
+
+            <span>
+                FORMACIÓN CONTINUA
+            </span>
+
+
+            <h2>
+                Próximos cursos
+            </h2>
+
+
+            <p>
+
+                Participa en nuestras próximas actividades académicas
+                y continúa fortaleciendo tus conocimientos y
+                competencias profesionales junto a EAS.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="proximos-grid">
+
+
+
+            <!-- =================================================
+                 PRÓXIMO CURSO
+                 PRIMEROS AUXILIOS PEDIÁTRICOS + RCP
+            ================================================== -->
+
+            <article class="proximo-curso">
+
+
+
+                <div class="imagen-proximo">
+
+
+                    <!-- =================================================
+                         FOTO TEMPORAL DEL CURSO
+
+                         ESTA FOTO ESTÁ EN INTERNET.
+
+                         CUANDO TENGAS TU PROPIO FLYER O FOTO
+                         SOLO CAMBIA EL src=""
+                    ================================================== -->
+
+                    <img
+                        src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85"
+                        alt="Curso de Primeros Auxilios Pediátricos y RCP">
+
+
+                    <div class="etiqueta-imagen">
+
+                        PRÓXIMO CURSO
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="proximo-contenido">
+
+
+
+                    <h3>
+
+                        Primeros Auxilios Pediátricos y
+                        Reanimación Cardiopulmonar en el Adulto
+
+                    </h3>
+
+
+
+                    <p class="proximo-descripcion">
+
+                        Fortalece tus conocimientos para actuar
+                        oportunamente ante situaciones de emergencia
+                        en pacientes pediátricos y adultos.
+
+                    </p>
+
+
+
+                    <div class="datos-proximo">
+
+
+                        📅
+                        <strong>Fecha:</strong>
+                        Domingo 25 de octubre de 2026
+
+                        <br>
+
+
+                        🕙
+                        <strong>Hora:</strong>
+                        10:00 a. m.
+
+                        <br>
+
+
+                        💻
+                        <strong>Modalidad:</strong>
+                        Virtual vía Google Meet
+
+                        <br>
+
+
+                        💙
+                        <strong>Participación:</strong>
+                        Gratuita
+
+                        <br>
+
+
+                        🎓
+                        <strong>Certificado:</strong>
+                        Opcional
+
+
+                    </div>
+
+
+
+                    <div class="botones-curso">
+
+
+
+                        <!-- =================================================
+                             ABRE LA PÁGINA DETALLADA DEL CURSO
+                        ================================================== -->
+
+                        <a
+                            href="curso-rcp-pediatrico.html"
+                            class="boton-curso boton-informacion">
+
+                            Más información
+
+                        </a>
+
+
+
+                        <!-- =================================================
+                             WHATSAPP
+                        ================================================== -->
+
+                        <a
+
+                            href="https://wa.me/51959559628?text=Hola%20Enfermeros%20Aliados%20en%20Salud,%20deseo%20información%20sobre%20el%20curso%20de%20Primeros%20Auxilios%20Pediátricos%20y%20RCP."
+
+                            target="_blank"
+
+                            class="boton-curso boton-inscripcion">
+
+                            Inscribirme
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PARA AGREGAR OTRO PRÓXIMO CURSO
+
+                 COPIA TODO EL BLOQUE:
+
+                 <article class="proximo-curso">
+
+                 ...
+
+                 </article>
+
+                 Y CAMBIA LOS DATOS.
+            ================================================== -->
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     CURSOS ANTERIORES
+========================================================= -->
+
+<section
+    class="cursos-anteriores"
+    id="anteriores">
+
+
+    <div class="contenedor">
+
+
+        <div class="titulo-seccion">
+
+
+            <span>
+                NUESTRA TRAYECTORIA
+            </span>
+
+
+            <h2>
+                Cursos anteriores
+            </h2>
+
+
+            <p>
+
+                Conoce algunas de las actividades académicas
+                desarrolladas por Enfermeros Aliados en Salud.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="slider-contenedor">
+
+
+
+            <div
+                class="slider-cursos"
+                id="sliderCursos">
+
+
+
+                <!-- =================================================
+                     CURSO ANTERIOR 1
+                     ADULTO MAYOR
+                ================================================== -->
+
+                <article class="curso-anterior">
+
+
+                    <!-- FOTO TEMPORAL DE INTERNET -->
+
+                    <img
+                        src="https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=900&q=85"
+                        alt="Cuidados del Adulto Mayor">
+
+
+                    <div class="curso-anterior-info">
+
+
+                        <span>
+                            CURSO REALIZADO
+                        </span>
+
+
+                        <h3>
+
+                            Actualización en Cuidados Integrales
+                            del Adulto Mayor
+
+                        </h3>
+
+
+                        <p class="fecha-anterior">
+
+                            📅 11 de octubre de 2026
+
+                        </p>
+
+
+                        <p>
+
+                            Actividad académica orientada al cuidado
+                            integral, movilización y prevención de
+                            complicaciones en el adulto mayor.
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+                <!-- =================================================
+                     CURSO ANTERIOR 2
+                     CURACIÓN DE HERIDAS
+                ================================================== -->
+
+                <article class="curso-anterior">
+
+
+                    <!-- FOTO TEMPORAL DE INTERNET -->
+
+                    <img
+                        src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85"
+                        alt="Curación de Heridas y Ostomías">
+
+
+                    <div class="curso-anterior-info">
+
+
+                        <span>
+                            CURSO REALIZADO
+                        </span>
+
+
+                        <h3>
+
+                            Curación de Heridas y Ostomías
+
+                        </h3>
+
+
+                        <p class="fecha-anterior">
+
+                            📅 18 de octubre de 2026
+
+                        </p>
+
+
+                        <p>
+
+                            Actualización profesional enfocada
+                            en valoración, manejo y cuidados
+                            de heridas y ostomías.
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+                <!-- =================================================
+                     CURSO ANTERIOR 3
+                     OXIGENOTERAPIA
+                ================================================== -->
+
+                <article class="curso-anterior">
+
+
+                    <!-- FOTO TEMPORAL DE INTERNET -->
+
+                    <img
+                        src="https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&w=900&q=85"
+                        alt="Oxigenoterapia para Enfermería">
+
+
+                    <div class="curso-anterior-info">
+
+
+                        <span>
+                            CURSO REALIZADO
+                        </span>
+
+
+                        <h3>
+
+                            Oxigenoterapia para Enfermería
+
+                        </h3>
+
+
+                        <p class="fecha-anterior">
+
+                            🫁 Actividad académica EAS
+
+                        </p>
+
+
+                        <p>
+
+                            Actualización sobre valoración respiratoria,
+                            dispositivos de oxígeno y administración
+                            segura de oxigenoterapia.
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+                <!-- =================================================
+                     CURSO ANTERIOR 4
+                     TRIAJE
+                ================================================== -->
+
+                <article class="curso-anterior">
+
+
+                    <!-- FOTO TEMPORAL DE INTERNET -->
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=900&q=85"
+                        alt="Triaje Clínico">
+
+
+                    <div class="curso-anterior-info">
+
+
+                        <span>
+                            CURSO REALIZADO
+                        </span>
+
+
+                        <h3>
+
+                            Triaje Clínico
+
+                        </h3>
+
+
+                        <p class="fecha-anterior">
+
+                            🚑 Actividad académica EAS
+
+                        </p>
+
+
+                        <p>
+
+                            Formación relacionada con valoración
+                            inicial, clasificación y priorización
+                            del paciente en los servicios de emergencia.
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+                <!-- =================================================
+                     CURSO ANTERIOR 5
+                     DIABETES
+                ================================================== -->
+
+                <article class="curso-anterior">
+
+
+                    <!-- FOTO TEMPORAL DE INTERNET -->
+
+                    <img
+                        src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=85"
+                        alt="Manejo del Paciente Diabético">
+
+
+                    <div class="curso-anterior-info">
+
+
+                        <span>
+                            CURSO REALIZADO
+                        </span>
+
+
+                        <h3>
+
+                            Manejo del Paciente Diabético
+
+                        </h3>
+
+
+                        <p class="fecha-anterior">
+
+                            🩺 Jornada académica EAS
+
+                        </p>
+
+
+                        <p>
+
+                            Actualización sobre valoración,
+                            vigilancia y principales cuidados
+                            de enfermería en el paciente diabético.
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+                <!-- =================================================
+                     PARA AGREGAR MÁS CURSOS
+
+                     COPIA UN BLOQUE:
+
+                     <article class="curso-anterior">
+
+                     ...
+
+                     </article>
+
+                     Y CAMBIA:
+
+                     - FOTO
+                     - NOMBRE
+                     - FECHA
+                     - DESCRIPCIÓN
+                ================================================== -->
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FLECHAS DEL SLIDER
+            ================================================== -->
+
+            <div class="slider-botones">
+
+
+                <button
+                    type="button"
+                    class="slider-boton"
+                    onclick="moverSlider(-1)"
+                    aria-label="Anterior">
+
+                    ❮
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="slider-boton"
+                    onclick="moverSlider(1)"
+                    aria-label="Siguiente">
+
+                    ❯
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     BENEFICIOS
+========================================================= -->
+
+<section class="beneficios">
+
+
+    <div class="contenedor">
+
+
+        <div class="titulo-seccion">
+
+
+            <span>
+
+                ¿Por qué capacitarte con nosotros?
+
+            </span>
+
+
+            <h2>
+
+                Formación pensada para enfermería
+
+            </h2>
+
+
+            <p>
+
+                Nuestro objetivo es ofrecer experiencias
+                educativas útiles, claras y aplicables
+                en el ejercicio profesional.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="beneficios-grid">
+
+
+
+            <div class="beneficio">
+
+
+                <div class="beneficio-icono">
+
+                    👩‍⚕️
+
+                </div>
+
+
+                <h3>
+
+                    Ponentes profesionales
+
+                </h3>
+
+
+                <p>
+
+                    Profesionales con experiencia
+                    clínica y asistencial.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="beneficio">
+
+
+                <div class="beneficio-icono">
+
+                    📚
+
+                </div>
+
+
+                <h3>
+
+                    Material actualizado
+
+                </h3>
+
+
+                <p>
+
+                    Información diseñada para
+                    facilitar el aprendizaje.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="beneficio">
+
+
+                <div class="beneficio-icono">
+
+                    💻
+
+                </div>
+
+
+                <h3>
+
+                    Modalidad virtual
+
+                </h3>
+
+
+                <p>
+
+                    Participa desde cualquier
+                    lugar mediante plataformas digitales.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="beneficio">
+
+
+                <div class="beneficio-icono">
+
+                    🎓
+
+                </div>
+
+
+                <h3>
+
+                    Certificación
+
+                </h3>
+
+
+                <p>
+
+                    Opción de certificación
+                    según cada actividad académica.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     EQUIPO EAS
+========================================================= -->
+
+<section
+    class="equipo"
+    id="equipo">
+
+
+    <div class="contenedor">
+
+
+        <div class="titulo-seccion">
+
+
+            <span>
+
+                Nuestros profesionales
+
+            </span>
+
+
+            <h2>
+
+                Equipo EAS
+
+            </h2>
+
+
+            <p>
+
+                Conoce algunos de los profesionales que
+                participan en nuestras actividades académicas.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="equipo-grid">
+
+
+
+            <!-- =================================================
+                 LUIS FLORES
+            ================================================== -->
+
+            <div class="ponente">
+
+
+                <!-- FOTO LOCAL -->
+
+                <img
+                    src="imagenes/luis-flores.jpg"
+                    alt="Lic. Luis Flores Vásquez">
+
+
+                <h3>
+
+                    Lic. Esp. Luis Flores Vásquez
+
+                </h3>
+
+
+                <div class="ponente-cargo">
+
+                    Cuidados Nefrológicos
+
+                </div>
+
+
+                <p>
+
+                    Cuidado especializado del paciente renal
+                    y terapias dialíticas.
+
+                </p>
+
+
+            </div>
+
+
+
+
+            <!-- =================================================
+                 JUAN NIETO
+
+                 FOTO TEMPORAL DE INTERNET
+            ================================================== -->
+
+            <div class="ponente">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=85"
+                    alt="Profesional de salud">
+
+
+                <h3>
+
+                    Lic. Esp. Juan Nieto Estela
+
+                </h3>
+
+
+                <div class="ponente-cargo">
+
+                    Emergencia y Desastres
+
+                </div>
+
+
+                <p>
+
+                    Experiencia en emergencia,
+                    paciente crítico y trauma shock.
+
+                </p>
+
+
+            </div>
+
+
+
+
+            <!-- =================================================
+                 KARINA VIVANCO
+
+                 FOTO TEMPORAL DE INTERNET
+            ================================================== -->
+
+            <div class="ponente">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85"
+                    alt="Profesional de enfermería">
+
+
+                <h3>
+
+                    Lic. Karina Vivanco Gervasio
+
+                </h3>
+
+
+                <div class="ponente-cargo">
+
+                    Pediatría
+
+                </div>
+
+
+                <p>
+
+                    Experiencia en cuidados pediátricos,
+                    atención integral del niño
+                    y acompañamiento familiar.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     CERTIFICACIÓN
+========================================================= -->
+
+<section id="certificados">
+
+
+    <div class="contenedor">
+
+
+        <div class="certificado-contenido">
+
+
+
+            <div class="certificado-texto">
+
+
+                <span
+                    style="color:#18b6c9;font-weight:bold;">
+
+                    CERTIFICACIÓN
+
+                </span>
+
+
+
+                <h2>
+
+                    Certifica tu participación
+
+                </h2>
+
+
+
+                <p>
+
+                    Algunas de nuestras actividades académicas
+                    cuentan con la posibilidad de solicitar
+                    certificado de participación.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    El certificado es
+
+                    <strong>
+                        opcional
+                    </strong>
+
+                    y su disponibilidad, costo y horas académicas
+                    se informarán previamente en cada actividad.
+
+                </p>
+
+
+                <br>
+
+
+
+                <a
+                    href="#contacto"
+                    class="boton boton-principal">
+
+                    Solicitar información
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="certificado-caja">
+
+
+                <div class="icono">
+
+                    📜
+
+                </div>
+
+
+                <h2>
+
+                    Certificado EAS
+
+                </h2>
+
+
+                <p>
+
+                    Reconocimiento de participación
+                    en nuestras jornadas y cursos académicos.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACTO
+========================================================= -->
+
+<section
+    class="contacto"
+    id="contacto">
+
+
+    <div class="contenedor">
+
+
+        <h2>
+
+            ¿Quieres participar en nuestros próximos cursos?
+
+        </h2>
+
+
+
+        <p>
+
+            Escríbenos y recibe información sobre
+            próximas jornadas, cursos, enlaces de acceso
+            y certificación.
+
+        </p>
+
+
+
+        <a
+
+            href="https://wa.me/51959559628?text=Hola%20Enfermeros%20Aliados%20en%20Salud,%20deseo%20información%20sobre%20sus%20próximos%20cursos."
+
+            target="_blank"
+
+            class="boton whatsapp">
+
+            💬 Escríbenos por WhatsApp
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     PIE DE PÁGINA
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+
+        <!-- COLUMNA 1 -->
+
+        <div>
+
+
+            <h3>
+
+                Enfermeros Aliados en Salud
+
+            </h3>
+
+
+            <p>
+
+                Capacitación y actualización
+                para profesionales y estudiantes
+                del área de enfermería.
+
+            </p>
+
+
+        </div>
+
+
+
+
+        <!-- COLUMNA 2 -->
+
+        <div>
+
+
+            <h3>
+
+                Navegación
+
+            </h3>
+
+
+            <a href="#inicio">
+
+                Inicio
+
+            </a>
+
+
+            <a href="#nosotros">
+
+                Nosotros
+
+            </a>
+
+
+            <a href="#cursos">
+
+                Próximos cursos
+
+            </a>
+
+
+            <a href="#anteriores">
+
+                Cursos anteriores
+
+            </a>
+
+
+            <a href="#equipo">
+
+                Equipo
+
+            </a>
+
+
+        </div>
+
+
+
+
+        <!-- =====================================================
+             REDES SOCIALES
+
+             REEMPLAZA "#" POR TUS ENLACES.
+        ====================================================== -->
+
+        <div>
+
+
+            <h3>
+
+                Síguenos
+
+            </h3>
+
+
+            <a
+                href="#"
+                target="_blank">
+
+                TikTok
+
+            </a>
+
+
+            <a
+                href="#"
+                target="_blank">
+
+                Facebook
+
+            </a>
+
+
+            <a
+                href="#"
+                target="_blank">
+
+                Instagram
+
+            </a>
+
+
+        </div>
+
+
+
+
+        <!-- COLUMNA 4 -->
+
+        <div>
+
+
+            <h3>
+
+                Contacto
+
+            </h3>
+
+
+            <p>
+
+                📍 Lima, Perú
+
+            </p>
+
+
+            <p>
+
+                📱 WhatsApp:
+                959 559 628
+
+            </p>
+
+
+            <p>
+
+                ✉️ Enfermeros Aliados en Salud
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+
+        ©
+
+        <span id="anio"></span>
+
+        Enfermeros Aliados en Salud · EAS.
+
+        Todos los derechos reservados.
+
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     WHATSAPP FLOTANTE
+========================================================= -->
+
+<a
+
+    href="https://wa.me/51959559628"
+
+    target="_blank"
+
+    class="whatsapp-flotante"
+
+    title="Contactar por WhatsApp">
+
+    💬
+
+</a>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =========================================================
+       AÑO AUTOMÁTICO
+    ========================================================== */
+
+    document.getElementById("anio").textContent =
+        new Date().getFullYear();
+
+
+
+    /* =========================================================
+       SLIDER CURSOS ANTERIORES
+
+       NO NECESITAS MODIFICAR ESTA PARTE.
+    ========================================================== */
+
+    function moverSlider(direccion) {
+
+
+        const slider =
+            document.getElementById("sliderCursos");
+
+
+        slider.scrollBy({
+
+            left: direccion * 370,
+
+            behavior: "smooth"
+
+        });
+
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>
